@@ -1,3 +1,9 @@
+:root{
+    --hourmove: 270deg;
+    --minmove: 45deg;
+    --secmove: 0;
+
+}
 *{
     box-sizing: border-box;
 }
@@ -18,4 +24,61 @@ ul{
     padding-left: 0;
     margin-top: 0;
     margin-bottom: 0;
+}
+.main{
+    width: 100vw;
+    height: 100vh;
+    padding: 50px;
+    background-color: dimgray;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.analog{
+    width: 300px;
+    height: 300px;
+    background-position: center;
+    background-size: cover;
+    background-image: url('../img/relog.png');
+    position: relative;
+}
+.digital{
+    text-align: center;
+    padding-right: 50px;
+}
+.center{
+    position: absolute;
+    top: 50%;
+    left: calc(50% - 60px);
+    transform: translate(-50%, -50%);
+}
+.hour{
+    width: 125px;
+    height: 4px;
+    background-color: black;
+}
+.circle{
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: black;
+    left: 50%;
+}
+.hour{
+    width: 125px;
+    height: 6px;
+    background-color: black;
+    rotate: var(--hourmove);
+}
+.sec{
+    width: 125px;
+    height: 1px;
+    background-color: rgb(241, 0, 0);
+    rotate: var(--secmove);
+}
+.min{
+    width: 125px;
+    height: 3px;
+    background-color: rgb(47, 101, 163);
+    rotate: var(--minmove);
 }
